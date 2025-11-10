@@ -1,0 +1,32 @@
+[
+  {
+    "day": 1,
+    "title": "Italia / Abu Dhabi",
+    "date": "Giovedì 6 Novembre 2025",
+    "items": [
+      {
+        "id": 101,
+        "category": "Travel",
+        "icon": "flight_takeoff",
+        "time": "Mattina",
+        "title": "Partenza per Abu Dhabi",
+        "description": "Ritrovo degli Ospiti BEVERAGE NETWORK agli aeroporti di Milano Malpensa e Roma Fiumicino, incontro con le assistenti aeroportuali e disbrigo delle pratiche d'imbarco. Partenza con voli di linea Etihad."
+      },
+      {
+        "id": 102,
+        "category": "Hotel",
+        "icon": "hotel",
+        "time": "Serata",
+        "title": "Arrivo e Check-in",
+        "description": "Arrivo all'aeroporto di Abu Dhabi, incontro con le guide locali parlanti italiano e trasferimento in Hotel. Arrivo all'hotel Emirates Palace, check-in, assegnazione delle camere riservate e pernottamento.",
+        "image": {
+          "urls": ["https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070"],
+          "caption": "Emirates Palace Hotel",
+          "details": [
+            { "icon": "location_on", "text": "West Corniche Road - Abu Dhabi" }
+          ]
+        }
+      }
+    ]
+  }
+]

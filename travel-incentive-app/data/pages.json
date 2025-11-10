@@ -1,0 +1,257 @@
+{
+  "pages": [
+    {
+      "id": "travel",
+      "metadata": {
+        "pageTitle": "Travel",
+        "pageDescription": "Informazioni sui voli e gli spostamenti",
+        "icon": "flight_takeoff",
+        "showInMenu": true,
+        "menuPriority": 1
+      },
+      "content": {
+        "sections": [
+          {
+            "title": "Voli",
+            "icon": "flight",
+            "description": "Informazioni sui voli di andata e ritorno"
+          },
+          {
+            "title": "Trasferimenti",
+            "icon": "airport_shuttle",
+            "description": "Dettagli sui trasferimenti aeroporto-hotel"
+          }
+        ]
+      }
+    },
+    {
+      "id": "agenda",
+      "metadata": {
+        "pageTitle": "Agenda",
+        "pageDescription": "Programma dettagliato del viaggio",
+        "icon": "calendar_today",
+        "showInMenu": true,
+        "menuPriority": 2
+      },
+      "content": {
+        "sections": [
+          {
+            "title": "Programma Giornaliero",
+            "icon": "schedule",
+            "description": "Attività e appuntamenti giorno per giorno"
+          }
+        ]
+      }
+    },
+    {
+      "id": "explore",
+      "metadata": {
+        "pageTitle": "Explore",
+        "pageDescription": "Scopri Abu Dhabi e le sue attrazioni",
+        "icon": "explore",
+        "showInMenu": true,
+        "menuPriority": 3
+      },
+      "content": {
+        "sections": [
+          {
+            "title": "Attrazioni",
+            "icon": "attractions",
+            "description": "Luoghi di interesse e attrazioni principali"
+          },
+          {
+            "title": "Attività",
+            "icon": "local_activity",
+            "description": "Esperienze e attività in programma"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gallery",
+      "metadata": {
+        "pageTitle": "Gallery",
+        "pageDescription": "Foto e immagini del viaggio",
+        "icon": "photo_library",
+        "showInMenu": true,
+        "menuPriority": 4
+      },
+      "content": {
+        "sections": [
+          {
+            "title": "Foto Gallery",
+            "icon": "collections",
+            "description": "Raccolta di immagini delle location e attività"
+          }
+        ]
+      }
+    },
+    {
+      "id": "documents",
+      "metadata": {
+        "pageTitle": "Documents",
+        "pageDescription": "Documenti e informazioni importanti",
+        "icon": "description",
+        "showInMenu": true,
+        "menuPriority": 5
+      },
+      "content": {
+        "sections": [
+          {
+            "title": "Documenti di Viaggio",
+            "icon": "folder",
+            "description": "Documenti essenziali per il viaggio"
+          },
+          {
+            "title": "Informazioni Utili",
+            "icon": "info",
+            "description": "Guide e informazioni pratiche"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contact",
+      "metadata": {
+        "pageTitle": "Contact",
+        "pageDescription": "Contatti e numeri utili",
+        "icon": "contact_support",
+        "showInMenu": true,
+        "menuPriority": 6
+      },
+      "content": {
+        "sections": [
+          {
+            "title": "Contatti di Emergenza",
+            "icon": "emergency",
+            "description": "Numeri e contatti per emergenze"
+          },
+          {
+            "title": "Supporto",
+            "icon": "support_agent",
+            "description": "Assistenza e supporto durante il viaggio"
+          }
+        ]
+      }
+    },
+    {
+      "id": "profile",
+      "metadata": {
+        "pageTitle": "Profile",
+        "pageDescription": "Il tuo profilo personale",
+        "icon": "account_circle",
+        "showInMenu": true,
+        "menuPriority": 7
+      },
+      "content": {
+        "sections": [
+          {
+            "title": "Dati Personali",
+            "icon": "person",
+            "description": "Le tue informazioni personali"
+          },
+          {
+            "title": "Preferenze",
+            "icon": "settings",
+            "description": "Impostazioni e preferenze"
+          }
+        ]
+      }
+    },
+    {
+      "id": "login",
+      "metadata": {
+        "pageTitle": "Login",
+        "pageDescription": "Accedi all'area riservata",
+        "icon": "login",
+        "showInMenu": false
+      }
+    },
+    {
+      "id": "registration",
+      "metadata": {
+        "pageTitle": "Registration",
+        "pageDescription": "Registrati al viaggio",
+        "icon": "app_registration",
+        "showInMenu": false
+      }
+    },
+    {
+      "id": "settings",
+      "metadata": {
+        "pageTitle": "Settings",
+        "pageDescription": "Impostazioni dell'applicazione",
+        "icon": "settings",
+        "showInMenu": false
+      }
+    }
+  ],
+  "menus": {
+    "main": {
+      "id": "main_menu",
+      "title": "Menu Principale",
+      "items": [
+        {
+          "id": "travel",
+          "label": "Travel",
+          "icon": "flight_takeoff",
+          "path": "/travel"
+        },
+        {
+          "id": "agenda",
+          "label": "Agenda",
+          "icon": "calendar_today",
+          "path": "/agenda"
+        },
+        {
+          "id": "explore",
+          "label": "Explore",
+          "icon": "explore",
+          "path": "/explore"
+        },
+        {
+          "id": "gallery",
+          "label": "Gallery",
+          "icon": "photo_library",
+          "path": "/gallery"
+        },
+        {
+          "id": "documents",
+          "label": "Documents",
+          "icon": "description",
+          "path": "/documents"
+        },
+        {
+          "id": "contact",
+          "label": "Contact",
+          "icon": "contact_support",
+          "path": "/contact"
+        }
+      ]
+    },
+    "user": {
+      "id": "user_menu",
+      "title": "Menu Utente",
+      "items": [
+        {
+          "id": "profile",
+          "label": "Profile",
+          "icon": "account_circle",
+          "path": "/profile"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "icon": "settings",
+          "path": "/settings"
+        },
+        {
+          "id": "logout",
+          "label": "Logout",
+          "icon": "logout",
+          "path": "/logout"
+        }
+      ]
+    }
+  }
+}

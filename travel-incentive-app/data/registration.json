@@ -1,0 +1,220 @@
+{
+  "registrationConfig": {
+    "deadline": "2025-09-30T23:59:59Z",
+    "status": "open",
+    "sections": [
+      {
+        "id": "personal_info",
+        "title": "Dati Personali",
+        "icon": "person",
+        "required": true,
+        "order": 1,
+        "fields": [
+          {
+            "id": "full_name",
+            "type": "text",
+            "label": "Nome e Cognome",
+            "required": true,
+            "placeholder": "Inserisci nome e cognome completi"
+          },
+          {
+            "id": "birth_date",
+            "type": "date",
+            "label": "Data di Nascita",
+            "required": true,
+            "placeholder": "Seleziona la data di nascita"
+          },
+          {
+            "id": "gender",
+            "type": "select",
+            "label": "Sesso",
+            "required": true,
+            "options": [
+              { "value": "M", "label": "Maschile" },
+              { "value": "F", "label": "Femminile" },
+              { "value": "O", "label": "Altro" }
+            ]
+          },
+          {
+            "id": "email",
+            "type": "email",
+            "label": "Email",
+            "required": true,
+            "placeholder": "Inserisci la tua email"
+          },
+          {
+            "id": "phone",
+            "type": "tel",
+            "label": "Telefono",
+            "required": true,
+            "placeholder": "+39"
+          }
+        ]
+      },
+      {
+        "id": "passport",
+        "title": "Dati Passaporto",
+        "icon": "badge",
+        "required": true,
+        "order": 2,
+        "fields": [
+          {
+            "id": "passport_number",
+            "type": "text",
+            "label": "Numero Passaporto",
+            "required": true,
+            "placeholder": "Inserisci il numero del passaporto"
+          },
+          {
+            "id": "passport_expiry",
+            "type": "date",
+            "label": "Data Scadenza",
+            "required": true,
+            "placeholder": "Seleziona la data di scadenza",
+            "validation": {
+              "minDate": "2026-05-10",
+              "message": "Il passaporto deve avere validità di almeno 6 mesi dalla data di rientro"
+            }
+          },
+          {
+            "id": "passport_country",
+            "type": "select",
+            "label": "Paese di Emissione",
+            "required": true,
+            "options": [
+              { "value": "IT", "label": "Italia" },
+              { "value": "OTHER", "label": "Altro" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "travel_preferences",
+        "title": "Preferenze di Viaggio",
+        "icon": "flight",
+        "required": true,
+        "order": 3,
+        "fields": [
+          {
+            "id": "departure_airport",
+            "type": "select",
+            "label": "Aeroporto di Partenza",
+            "required": true,
+            "options": [
+              { "value": "MXP", "label": "Milano Malpensa" },
+              { "value": "FCO", "label": "Roma Fiumicino" },
+              { "value": "VCE", "label": "Venezia Marco Polo" }
+            ]
+          },
+          {
+            "id": "meal_preference",
+            "type": "select",
+            "label": "Preferenze Pasti",
+            "required": true,
+            "options": [
+              { "value": "regular", "label": "Menu Standard" },
+              { "value": "vegetarian", "label": "Vegetariano" },
+              { "value": "vegan", "label": "Vegano" },
+              { "value": "halal", "label": "Halal" },
+              { "value": "kosher", "label": "Kosher" },
+              { "value": "gluten_free", "label": "Senza Glutine" }
+            ]
+          },
+          {
+            "id": "special_assistance",
+            "type": "checkbox",
+            "label": "Assistenza Speciale",
+            "required": false,
+            "options": [
+              { "value": "wheelchair", "label": "Sedia a rotelle" },
+              { "value": "medical", "label": "Assistenza medica" },
+              { "value": "other", "label": "Altro" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "emergency_contact",
+        "title": "Contatto di Emergenza",
+        "icon": "emergency",
+        "required": true,
+        "order": 4,
+        "fields": [
+          {
+            "id": "emergency_name",
+            "type": "text",
+            "label": "Nome e Cognome",
+            "required": true,
+            "placeholder": "Nome del contatto di emergenza"
+          },
+          {
+            "id": "emergency_relationship",
+            "type": "text",
+            "label": "Relazione",
+            "required": true,
+            "placeholder": "Es: Coniuge, Genitore, Figlio/a"
+          },
+          {
+            "id": "emergency_phone",
+            "type": "tel",
+            "label": "Telefono",
+            "required": true,
+            "placeholder": "+39"
+          },
+          {
+            "id": "emergency_email",
+            "type": "email",
+            "label": "Email",
+            "required": false,
+            "placeholder": "Email del contatto di emergenza"
+          }
+        ]
+      },
+      {
+        "id": "agreements",
+        "title": "Termini e Condizioni",
+        "icon": "gavel",
+        "required": true,
+        "order": 5,
+        "fields": [
+          {
+            "id": "terms_acceptance",
+            "type": "checkbox",
+            "label": "Accettazione Termini",
+            "required": true,
+            "options": [
+              {
+                "value": "terms",
+                "label": "Ho letto e accetto i termini e le condizioni"
+              }
+            ]
+          },
+          {
+            "id": "privacy_acceptance",
+            "type": "checkbox",
+            "label": "Privacy Policy",
+            "required": true,
+            "options": [
+              {
+                "value": "privacy",
+                "label": "Ho letto e accetto la privacy policy"
+              }
+            ]
+          },
+          {
+            "id": "marketing_consent",
+            "type": "checkbox",
+            "label": "Marketing",
+            "required": false,
+            "options": [
+              {
+                "value": "marketing",
+                "label": "Acconsento all'invio di materiale promozionale"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

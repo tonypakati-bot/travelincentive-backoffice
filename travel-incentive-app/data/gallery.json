@@ -1,0 +1,112 @@
+{
+  "galleryImages": [
+    {
+      "id": "gallery_001",
+      "url": "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=2070",
+      "thumbnail": "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=300",
+      "title": "Emirates Palace at Night",
+      "category": "Hotel",
+      "description": "Vista notturna dell'Emirates Palace illuminato",
+      "tags": ["hotel", "night", "luxury"]
+    },
+    {
+      "id": "gallery_002",
+      "url": "https://images.unsplash.com/photo-1590392928462-6bb32c0c9be1?q=80&w=2070",
+      "thumbnail": "https://images.unsplash.com/photo-1590392928462-6bb32c0c9be1?q=80&w=300",
+      "title": "Grande Moschea Sheikh Zayed",
+      "category": "Architettura",
+      "description": "La maestosa Grande Moschea Sheikh Zayed al tramonto",
+      "tags": ["mosque", "architecture", "sunset"]
+    },
+    {
+      "id": "gallery_003",
+      "url": "https://images.unsplash.com/photo-1522201949576-d3a89cde9943?q=80&w=2070",
+      "thumbnail": "https://images.unsplash.com/photo-1522201949576-d3a89cde9943?q=80&w=300",
+      "title": "Desert Safari",
+      "category": "Attività",
+      "description": "Emozionante safari tra le dune del deserto",
+      "tags": ["desert", "adventure", "dunes"]
+    },
+    {
+      "id": "gallery_004",
+      "url": "https://images.unsplash.com/photo-1632868114441-325cd0b171a7?q=80&w=1932",
+      "thumbnail": "https://images.unsplash.com/photo-1632868114441-325cd0b171a7?q=80&w=300",
+      "title": "Louvre Abu Dhabi",
+      "category": "Cultura",
+      "description": "L'iconica cupola del Louvre Abu Dhabi",
+      "tags": ["museum", "art", "architecture"]
+    },
+    {
+      "id": "gallery_005",
+      "url": "https://images.unsplash.com/photo-1629528915128-17c37a0d4a94?q=80&w=2070",
+      "thumbnail": "https://images.unsplash.com/photo-1629528915128-17c37a0d4a94?q=80&w=300",
+      "title": "Yas Marina Circuit",
+      "category": "Sport",
+      "description": "Il circuito di Formula 1 illuminato di notte",
+      "tags": ["f1", "sport", "night"]
+    },
+    {
+      "id": "gallery_006",
+      "url": "https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2070",
+      "thumbnail": "https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=300",
+      "title": "Abu Dhabi Skyline",
+      "category": "Città",
+      "description": "Lo spettacolare skyline di Abu Dhabi",
+      "tags": ["skyline", "city", "modern"]
+    },
+    {
+      "id": "gallery_007",
+      "url": "https://images.unsplash.com/photo-1601042879364-85a4848f87e9?q=80&w=2070",
+      "thumbnail": "https://images.unsplash.com/photo-1601042879364-85a4848f87e9?q=80&w=300",
+      "title": "Café del Mar Beach Club",
+      "category": "Ristorazione",
+      "description": "L'elegante location della cena di arrivederci",
+      "tags": ["restaurant", "beach", "dining"]
+    },
+    {
+      "id": "gallery_008",
+      "url": "https://images.unsplash.com/photo-1559394611-5a5857fe554d?q=80&w=1974",
+      "thumbnail": "https://images.unsplash.com/photo-1559394611-5a5857fe554d?q=80&w=300",
+      "title": "Sand & Koal Restaurant",
+      "category": "Ristorazione",
+      "description": "Uno dei raffinati ristoranti dell'Emirates Palace",
+      "tags": ["restaurant", "luxury", "dining"]
+    },
+    {
+      "id": "gallery_009",
+      "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070",
+      "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=300",
+      "title": "Emirates Palace Entrance",
+      "category": "Hotel",
+      "description": "L'imponente ingresso dell'Emirates Palace",
+      "tags": ["hotel", "luxury", "architecture"]
+    },
+    {
+      "id": "gallery_010",
+      "url": "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2025",
+      "thumbnail": "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=300",
+      "title": "Emirates Palace Lobby",
+      "category": "Hotel",
+      "description": "La sontuosa lobby dell'Emirates Palace",
+      "tags": ["hotel", "interior", "luxury"]
+    },
+    {
+      "id": "gallery_011",
+      "url": "https://images.unsplash.com/photo-1544726982-b414b6ae48b6?q=80&w=2070",
+      "thumbnail": "https://images.unsplash.com/photo-1544726982-b414b6ae48b6?q=80&w=300",
+      "title": "Desert Sunset",
+      "category": "Paesaggio",
+      "description": "Tramonto mozzafiato nel deserto di Abu Dhabi",
+      "tags": ["desert", "sunset", "nature"]
+    },
+    {
+      "id": "gallery_012",
+      "url": "https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=2070",
+      "thumbnail": "https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=300",
+      "title": "Traditional Souk",
+      "category": "Cultura",
+      "description": "Il colorato mercato tradizionale di Abu Dhabi",
+      "tags": ["market", "traditional", "culture"]
+    }
+  ]
+}
