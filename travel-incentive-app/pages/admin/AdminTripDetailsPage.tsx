@@ -50,7 +50,8 @@ const AdminTripDetailsPage: React.FC<AdminTripDetailsPageProps> = ({ tripId, onB
         if (travelData?.emergencyContacts) {
           travelData.emergencyContacts = travelData.emergencyContacts.map((c: any) => ({
             ...c,
-            departureGroup: c.departureGroup || ''
+            departureGroup: c.departureGroup || '',
+            type: c.type || ''
           }));
         }
         setTravelInfo(travelData);
@@ -234,7 +235,7 @@ const AdminTripDetailsPage: React.FC<AdminTripDetailsPageProps> = ({ tripId, onB
     if (!editedEmergency) return;
     const copy = JSON.parse(JSON.stringify(editedEmergency));
     // keep departureGroup empty by default (user prefers empty value)
-    copy.push({ departureGroup: '', name: '', phone: '', email: '' });
+  copy.push({ departureGroup: '', type: '', name: '', phone: '', email: '' });
     setEditedEmergency(copy);
   };
 
@@ -527,20 +528,22 @@ const AdminTripDetailsPage: React.FC<AdminTripDetailsPageProps> = ({ tripId, onB
                   {((isEditing ? (editedTrip?.eventDetails?.departureGroup || []) : (trip?.eventDetails?.departureGroup || [])) || []).map((g: string, i: number) => (
                     <span key={i} className={`inline-flex items-center px-3 py-1 rounded-full text-sm ${g && String(g).toLowerCase() === 'vip' ? 'bg-yellow-100 text-yellow-900' : 'bg-gray-100 text-gray-800'}`}>
                       <span className="mr-2">{g}</span>
-                      <button type="button" className={`${g && String(g).toLowerCase() === 'vip' ? 'text-yellow-700 hover:text-yellow-900' : 'text-gray-500 hover:text-gray-700'}`} aria-label={`Remove ${g}`} onClick={() => {
-                        // if editing, remove from editedTrip; otherwise no-op
-                        if (!isEditing) return;
-                        const copy = JSON.parse(JSON.stringify(editedTrip || {}));
-                        const arr = (copy.eventDetails = copy.eventDetails || {}).departureGroup || [];
-                        const idx = arr.indexOf(g);
-                        if (idx >= 0) {
-                          arr.splice(idx, 1);
-                          copy.eventDetails.departureGroup = arr;
-                          setEditedTrip(copy);
-                        }
-                      }}>
-                        <span className="material-symbols-outlined text-xs">close</span>
-                      </button>
+                      {isEditing ? (
+                        <button type="button" className={`${g && String(g).toLowerCase() === 'vip' ? 'text-yellow-700 hover:text-yellow-900' : 'text-gray-500 hover:text-gray-700'}`} aria-label={`Remove ${g}`} onClick={() => {
+                          const copy = JSON.parse(JSON.stringify(editedTrip || {}));
+                          const arr = (copy.eventDetails = copy.eventDetails || {}).departureGroup || [];
+                          const idx = arr.indexOf(g);
+                          if (idx >= 0) {
+                            arr.splice(idx, 1);
+                            copy.eventDetails.departureGroup = arr;
+                            setEditedTrip(copy);
+                          }
+                        }}>
+                          <span className="material-symbols-outlined text-xs">close</span>
+                        </button>
+                      ) : (
+                        <div className="w-2" />
+                      )}
                     </span>
                   ))}
                 </div>
@@ -766,7 +769,7 @@ const AdminTripDetailsPage: React.FC<AdminTripDetailsPageProps> = ({ tripId, onB
             <div className="mt-4 space-y-4">
               {(isEditingEmergency ? (editedEmergency || []) : (travelInfo?.emergencyContacts || [])).map((c: any, idx: number) => (
                 <div key={idx} className="bg-white border rounded-lg p-4">
-                  <div className="grid grid-cols-1 md:grid-cols-5 gap-3 items-center">
+                  <div className="grid grid-cols-1 md:grid-cols-6 gap-3 items-center">
                     <div>
                       <label className="text-xs text-gray-600">Gruppo Partenza</label>
                       {/* build departure group options from outboundFlights (deduped) */}
@@ -789,6 +792,10 @@ const AdminTripDetailsPage: React.FC<AdminTripDetailsPageProps> = ({ tripId, onB
                     <div>
                       <label className="text-xs text-gray-600">Nome Contatto</label>
                       <input readOnly={!isEditingEmergency} value={isEditingEmergency ? (c.name || c.contactName || '') : (c.name || c.contactName || '')} onChange={(e) => updateEditedEmergency(idx, 'name', e.target.value)} placeholder="Nome Cognome" className="mt-1 block w-full rounded-md border-gray-200 bg-gray-50 text-gray-700 p-2" />
+                    </div>
+                    <div>
+                      <label className="text-xs text-gray-600">Categoria</label>
+                      <input readOnly={!isEditingEmergency} value={isEditingEmergency ? (c.type || '') : (c.type || '')} onChange={(e) => updateEditedEmergency(idx, 'type', e.target.value)} placeholder="Categoria" className="mt-1 block w-full rounded-md border-gray-200 bg-gray-50 text-gray-700 p-2" />
                     </div>
                     <div>
                       <label className="text-xs text-gray-600">Telefono</label>
