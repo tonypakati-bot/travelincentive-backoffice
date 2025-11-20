@@ -28,4 +28,17 @@ router.delete('/:id', async (req, res) => {
   res.status(204).end();
 });
 
+// Bulk update status by tripName
+router.post('/update-status', async (req, res) => {
+  const { tripName, status } = req.body;
+  if (!tripName || !status) return res.status(400).json({ error: 'Missing params' });
+  try {
+    const result = await Participant.updateMany({ trip: tripName }, { $set: { status } });
+    res.json({ modifiedCount: result.modifiedCount });
+  } catch (err) {
+    console.error('update-status error', err);
+    res.status(500).json({ error: 'Internal error' });
+  }
+});
+
 export default router;

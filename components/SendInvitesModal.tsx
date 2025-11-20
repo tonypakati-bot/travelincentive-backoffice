@@ -46,6 +46,8 @@ Antonio Portaccio`;
 const SendInvitesModal: React.FC<SendInvitesModalProps> = ({ isOpen, onClose, onSend, tripName, inviteeCount, initialBody }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [emailContent, setEmailContent] = useState(initialBody || defaultEmailPreviewText);
+    const [isSending, setIsSending] = useState(false);
+    const [saveAsTemplate, setSaveAsTemplate] = useState(false);
 
     useEffect(() => {
         if (isOpen) {
@@ -90,6 +92,10 @@ const SendInvitesModal: React.FC<SendInvitesModalProps> = ({ isOpen, onClose, on
                             aria-label="Email content"
                         />
                     </div>
+                    <div className="mt-4 flex items-center gap-3">
+                        <input id="saveTemplate" type="checkbox" checked={saveAsTemplate} onChange={(e) => setSaveAsTemplate(e.target.checked)} className="h-4 w-4" />
+                        <label htmlFor="saveTemplate" className="text-sm text-gray-700">Salva come template per questo viaggio</label>
+                    </div>
                 </div>
 
                 <footer className="flex justify-end items-center space-x-4 p-5 bg-gray-50 border-t border-gray-200 rounded-b-xl">
@@ -101,20 +107,33 @@ const SendInvitesModal: React.FC<SendInvitesModalProps> = ({ isOpen, onClose, on
                     {isEditing ? (
                          <button
                             onClick={() => setIsEditing(false)}
+                            disabled={isSending}
                             className="bg-white border border-gray-300 text-gray-800 font-semibold px-5 py-2 rounded-lg hover:bg-gray-100 transition-colors">
                             Fine
                         </button>
                     ) : (
                         <button
                             onClick={() => setIsEditing(true)}
+                            disabled={isSending}
                             className="bg-white border border-gray-300 text-gray-800 font-semibold px-5 py-2 rounded-lg hover:bg-gray-100 transition-colors">
                             Modifica
                         </button>
                     )}
                     <button
-                        onClick={() => onSend(emailContent)}
-                        className="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                        Conferma e Invia
+                        onClick={async () => {
+                            if (isSending) return;
+                            setIsSending(true);
+                            try {
+                                await onSend(emailContent, saveAsTemplate);
+                            } catch (e) {
+                                // swallow, parent shows errors
+                            } finally {
+                                setIsSending(false);
+                            }
+                        }}
+                        disabled={isSending}
+                        className="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed">
+                        {isSending ? 'Invio in corso...' : 'Conferma e Invia'}
                     </button>
                 </footer>
             </div>
